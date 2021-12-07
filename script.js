@@ -2,6 +2,7 @@ $(".openbtn1").click(function () {
   //ボタンがクリックされたら
   $(this).toggleClass("active"); //ボタン自身に activeクラスを付与し
   $("#g-nav").toggleClass("panelactive"); //ナビゲーションにpanelactiveクラスを付与
+  $("#g-nav-leader").toggleClass("panelactive");
 });
 
 $("#g-nav a").click(function () {
