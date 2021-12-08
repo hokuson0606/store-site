@@ -19,12 +19,21 @@ li {
   list-style: none;
 }
 
+body {
+  margin: 0;
+}
+
 header {
   position: fixed;
+  z-index: 9999;
   width: 100%;
-  padding: 5px;
   background-color: white;
   justify-content: space-between;
+}
+
+#header-title {
+  width: 90%;
+  margin: 0 auto;
 }
 
 #g-nav {
@@ -99,7 +108,7 @@ header {
   width: 50px;
   height: 50px;
   top: 10px;
-  right: 25px;
+  right: 35px;
 }
 
 /*×に変化*/
@@ -144,17 +153,18 @@ header {
 .menu {
   z-index: -1;
   width: 95%;
-  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  margin: 0;
 }
 
 .list {
   width: 23%;
   position: relative;
   overflow: hidden;
-  padding-top: 13%;
+  padding-top: 20%;
   margin: 10px 5px;
 }
 
@@ -164,5 +174,29 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  height: 100%;
+  height: 60%;
+}
+
+.list p {
+  color: #333;
+}
+
+#viewmore {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+#footer-wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+#footer-nav {
+  display: flex;
+}
+
+.footer-list {
+  padding-right: 10px;
 }
