@@ -190,6 +190,7 @@ header {
 
 .list p {
   color: #333;
+  position: absolute;
 }
 
 #viewmore {
