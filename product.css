@@ -1,0 +1,210 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 12px;
+}
+
+a {
+  font-size: 14px;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  background-color: white;
+  justify-content: space-between;
+}
+
+#header-title {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#title p {
+  margin: 0;
+}
+
+#g-nav {
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  /*ナビのスタート位置と形状*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /*ナビの高さ*/
+  background: #333;
+  /*動き*/
+  transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive {
+  opacity: 1;
+  z-index: 999;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list {
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh; /*表示する高さ*/
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav-leader {
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 999;
+  top: 25%;
+  transition: all 0.3s;
+  left: -120%;
+  transform: translate(-50%, -50%);
+}
+
+#g-nav-leader.panelactive {
+  left: 5rem;
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li {
+  list-style: none;
+  text-align: center;
+}
+
+#g-nav li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: lighter;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn1 {
+  position: fixed;
+  z-index: 9999; /*ボタンを最前面に*/
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  right: 35px;
+}
+
+/*×に変化*/
+.openbtn1 span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 13px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #666;
+}
+
+.openbtn1.active span {
+  background-color: white;
+}
+
+.openbtn1 span:nth-of-type(1) {
+  top: 22px;
+  width: 50%;
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top: 29px;
+  width: 50%;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+  top: 20px;
+  left: 16px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 35%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  top: 32px;
+  left: 16px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 35%;
+}
+
+.menu {
+  z-index: -1;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  margin: 0 auto;
+}
+
+.list {
+  width: 23%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 25%;
+  margin: 10px 5px;
+}
+
+.list img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 60%;
+}
+
+.list p {
+  color: #333;
+}
+
+#viewmore {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+#footer-wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+#footer-nav {
+  display: flex;
+}
+
+.footer-list {
+  padding-right: 10px;
+}
