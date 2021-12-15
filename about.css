@@ -4,7 +4,7 @@
 }
 
 p {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 a {
@@ -23,12 +23,16 @@ li {
   list-style: none;
 }
 
+main {
+  margin-bottom: 80px;
+}
+
 body {
   margin: 0;
 }
 
 .space {
-  height: 80px;
+  height: 120px;
 }
 
 header {
@@ -45,8 +49,7 @@ header {
 }
 
 #title {
-  width: 90%;
-  margin: 0 auto 20px;
+  margin-bottom: 50px;
 }
 
 #title p {
@@ -167,34 +170,13 @@ header {
   width: 35%;
 }
 
-.menu {
-  z-index: -1;
-  width: 95%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.txt {
+  width: 50%;
+}
+
+.wrapper {
+  width: 90%;
   margin: 0 auto;
-}
-
-.list {
-  width: 23%;
-  position: relative;
-  overflow: hidden;
-}
-
-.list img {
-  object-fit: cover;
-  width: 100%;
-  height: 70%;
-}
-
-.list p {
-  color: #333;
-}
-
-#viewmore {
-  text-align: center;
-  margin-bottom: 120px;
 }
 
 #footer-wrapper {
